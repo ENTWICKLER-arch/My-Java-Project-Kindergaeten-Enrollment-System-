@@ -16,8 +16,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -25,9 +23,6 @@ public class RegisterServlet extends HttpServlet {
     public RegisterServlet() {
         super();
     }
-
-    
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
@@ -46,25 +41,24 @@ public class RegisterServlet extends HttpServlet {
         String from = "your.email@gmail.com"; 
         String host = "smtp.gmail.com";
 
-        // Set system properties for email
+        
         Properties properties = System.getProperties();
         properties.put("mail.smtp.host", host);
         properties.put("mail.smtp.port", "587");
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
 
-        // Create session object
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                // Ensure this email and app password are correct
+               
                 return new PasswordAuthentication("preranac03@gmail.com", "fcvm ycum wjat ieit");
             }
         });
 
-        // Try to send email
+       
         try {
             MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("preranac03@gmail.com")); // It's often better to use the exact 'preranac03@gmail.com' here for consistency with authentication
+            message.setFrom(new InternetAddress("preranac03@gmail.com"));  
             message.addRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject("🎉 Registration Successful - " + course);
             message.setText("Hi " + name + "!\n\nYou are successfully registered for the " + course + " course in " + city + ".\n\nThank you for joining us!\n\n~ Team Prerana ❤");
@@ -76,7 +70,7 @@ public class RegisterServlet extends HttpServlet {
             mex.printStackTrace();
         }
 
-        // Redirect to success.jsp - This remains
+       
         response.sendRedirect("success.jsp?status=success");
     }
 }

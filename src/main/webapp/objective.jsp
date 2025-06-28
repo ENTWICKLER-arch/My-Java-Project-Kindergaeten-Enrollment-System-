@@ -9,15 +9,15 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(120deg, #ffdee9, #b5fffc);
             text-align: center;
-            padding-top: 100px; /* Space for fixed navbar */
-            padding-bottom: 40px; /* Some padding at the bottom */
+            padding-top: 100px; 
+            padding-bottom: 40px; 
             animation: fadeIn 2s ease;
             margin: 0;
-            overflow-x: hidden; /* Prevent horizontal scrollbar if elements go slightly off-screen */
+            overflow-x: hidden; 
             position: relative;
         }
 
-        /* Navigation Bar Styles (retained from register.jsp) */
+        
         .navbar {
             position: fixed;
             top: 0;
@@ -85,44 +85,44 @@
             left: 0;
         }
 
-        /* Main Content Container (retained from register.jsp) */
+
         .content-container {
             background: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%);
             border-radius: 35px;
             padding: 60px 80px;
-            max-width: 1100px; /* Increased max-width for more content space */
-            margin: 80px auto 40px auto; /* Adjusted margin-bottom */
+            max-width: 1100px; 
+            margin: 80px auto 40px auto; 
             box-shadow: 0px 15px 30px rgba(0,0,0,0.25);
             animation: fadeIn 2s ease;
             position: relative;
             overflow: hidden;
             border: 2px solid rgba(255, 255, 255, 0.5);
-            text-align: left; /* Align content to left within container */
+            text-align: left; 
         }
 
-        /* Text Styling within container (retained/adjusted) */
+        
         h1, h2 {
-            font-size: 3.5em; /* Slightly smaller for objective title */
+            font-size: 3.5em; 
             color: #fff;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
             margin-top: 0;
             margin-bottom: 20px;
             animation: textPop 1.5s ease-out;
             letter-spacing: 2px;
-            text-align: center; /* Center the main titles */
+            text-align: center; 
         }
 
         h2 {
-            font-size: 2.8em; /* For section titles */
+            font-size: 2.8em; 
             margin-top: 60px;
             margin-bottom: 30px;
         }
 
         p {
-            font-size: 1.15em; /* Slightly larger for readability */
+            font-size: 1.15em; 
             color: #333;
             line-height: 1.8;
-            margin-bottom: 25px; /* Reduced margin for objective text */
+            margin-bottom: 25px; 
             font-weight: 500;
         }
 
@@ -131,7 +131,7 @@
             font-weight: 700;
         }
 
-        /* Animated background elements inside container (retained) */
+        
         .container-deco {
             position: absolute;
             opacity: 0.2;
@@ -150,7 +150,7 @@
             animation-delay: 2s;
         }
 
-        /* Keyframe Animations (retained) */
+       
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -180,7 +180,7 @@
             100% { transform: rotate(360deg) scale(0.9); }
         }
 
-        /* Floating Background Elements (retained) */
+       
         .floating-element {
             position: absolute;
             animation: floatEffect 7s infinite ease-in-out;
@@ -213,17 +213,17 @@
             animation-delay: 2s;
         }
 
-        /* New Styles for Course Section */
+       
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-            gap: 30px; /* Space between cards */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
             margin-top: 50px;
             text-align: center;
         }
 
         .course-card {
-            background: rgba(255, 255, 255, 0.7); /* Slightly transparent white background */
+            background: rgba(255, 255, 255, 0.7); 
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 8px 15px rgba(0,0,0,0.1);
@@ -231,28 +231,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align content to the top */
-            min-height: 350px; /* Ensure cards have consistent height */
+            justify-content: flex-start; 
+            min-height: 350px; 
         }
 
         .course-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 25px rgba(0,0,0,0.18);
-            background: rgba(255, 255, 255, 0.9); /* Slightly more opaque on hover */
-        }
+            background: rgba(255, 255, 255, 0.9); 
 
         .course-card img {
-            width: 100px; /* Size for course icons */
+            width: 100px; 
             height: 100px;
             object-fit: contain;
             margin-bottom: 20px;
-            border-radius: 10px; /* Slightly rounded corners for images */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Small shadow for images */
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
         }
 
         .course-card h3 {
             font-size: 1.8em;
-            color: #ff4d6d; /* Pink heading for courses */
+            color: #ff4d6d; 
             margin-top: 0;
             margin-bottom: 15px;
             letter-spacing: 1px;
@@ -263,13 +262,13 @@
             font-size: 1em;
             color: #555;
             line-height: 1.6;
-            margin-bottom: 0; /* No margin-bottom for card paragraphs */
+            margin-bottom: 0; 
         }
 
         .mission-points {
             margin-top: 40px;
             text-align: left;
-            list-style: none; /* Remove default list style */
+            list-style: none;
             padding: 0;
         }
 
@@ -278,11 +277,11 @@
             color: #444;
             margin-bottom: 15px;
             position: relative;
-            padding-left: 30px; /* Space for custom bullet */
+            padding-left: 30px; 
         }
 
         .mission-points li::before {
-            content: '🌟'; /* Star emoji as bullet point */
+            content: '🌟'; 
             position: absolute;
             left: 0;
             top: 0;
@@ -292,16 +291,16 @@
 
     </style>
     <script>
-        // Retained JavaScript for navbar active state
+        
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.navbar a');
 
-            // Find the current page (objective.jsp) and set it active
+           
             navLinks.forEach(link => {
                 if (link.getAttribute('href') === 'objective.jsp') {
                     link.classList.add('active');
                 } else {
-                     link.classList.remove('active'); // Ensure other links are not active
+                     link.classList.remove('active'); 
                 }
             });
         });
