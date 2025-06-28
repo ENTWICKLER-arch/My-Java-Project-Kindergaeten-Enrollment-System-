@@ -238,7 +238,7 @@
         .course-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 25px rgba(0,0,0,0.18);
-            background: rgba(255, 255, 255, 0.9); 
+            background: rgba(255, 255, 255, 0.9); }
 
         .course-card img {
             width: 100px; 
