@@ -10,9 +10,9 @@ import java.util.List;
 import com.portal.model.*;
 
 public class StudentDAO {
-private String jdbcURL ="jdbc:mysql://localhost:3306/student_portal";
-private String jdbcUsername="root";
-private String jdbcPassword="Preri1234";
+private String jdbcURL =" jdbc:mysql://${{RAILWAY_PRIVATE_DOMAIN}}";
+private String jdbcUsername=" root";
+private String jdbcPassword="${{MYSQL_ROOT_PASSWORD}}";
 
 private Connection getConnection()throws SQLException{
 	try {
